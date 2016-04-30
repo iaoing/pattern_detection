@@ -13,7 +13,7 @@
 - **name:**  *bingJiao*
 
 
-- **email:**  *aijiaobing@163.com*
+- **email:**  <aijiaobing@163.com>
 - **locate at:**  *Hu Nan university*
 
 ---
