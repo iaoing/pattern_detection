@@ -6,9 +6,14 @@
 5. More details about plfs and pattern detection can read the related paper about plfs.
 6. This code is too winded and immaturity.
 
-========================================
+---
 
-By *bingJiao*
-*aijiaobing@163.com*
+### BY
 
-========================================
+- **name:**  *bingJiao*
+
+
+- **email:**  *aijiaobing@163.com*
+- **locate at:**  *Hu Nan university*
+
+---
