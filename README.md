@@ -7,6 +7,8 @@
 6. This code is too winded and immaturity.
 
 ========================================
-  		By bingJiao
-            aijiaobing@163.com
+
+By bingJiao
+aijiaobing@163.com
+
 ========================================
