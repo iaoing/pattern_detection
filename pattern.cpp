@@ -467,12 +467,14 @@ int find_in_pattern_logical(off_t logical_offset, int sub_logical, int sub_physi
 					cur_off -= incremental;
 				else
 					cur_off += incremental;
+				if(cur_off == logical_offset)
+					return ret_count + 1;
 				if(cur_off > logical_offset)
 					return ret_count;
+				++ret_count;
 				if(*ptr == '^' || *ptr == '#')
 					continue;
 				++ptr;
-				++ret_count;
 			}
 		}
 
@@ -486,12 +488,110 @@ int find_in_pattern_logical(off_t logical_offset, int sub_logical, int sub_physi
 
 off_t find_relevant_physical(int sub_physical, int sub_length, int count)
 {
+	if(sub_physical > sub_length || sub_length > global_vector.end() - global_vector.begin()
+		|| sub_physical > global_vector.end() - global_vector.begin())
+	{
+		TRACE_FUNC();
+		return 0;
+	}
 
+	int sub = sub_physical, cur_count = 0, power = 0, neg = 0;
+	off_t ret_off = 0, incremental = 0;
+	char *ptr = NULL ;
+
+	ret_off = get_initial_off(&global_vector[sub]);
+	while(global_vector.at(sub++) != '#')
+		;
+
+	while(sub < sub_length)
+	{
+		power = get_power(&global_vector[sub]);
+		if(power == 0)	power = 1;
+
+		while(power -- )
+		{
+			ptr = &global_vector[sub];
+			while(*ptr != '#' && *ptr != '^')
+			{
+				neg = 0 ;
+				if(*ptr == '-')
+				{
+					++ptr;
+					neg = 1;
+				}
+				incremental = 0;
+				while(isdigit(*ptr))
+				{
+					incremental *= 10;
+					incremental += (*ptr++ -'0');
+				}
+				if(neg)
+					ret_off -= incremental;
+				else
+					ret_off += incremental;
+				++cur_count;
+				if(cur_count == count)
+					return ret_off;
+				if(*ptr == '^' || *ptr == '#')
+					continue;
+				++ptr;
+			}
+		}
+	}
 }
 
-size_t find_relevant_length(int sub_physical, int sub_end, int count)
+size_t find_relevant_length(int sub_length, int sub_end, int count)
 {
+	if(sub_length > sub_end || sub_end > global_vector.end() - global_vector.begin()
+		|| sub_length > global_vector.end() - global_vector.begin())
+	{
+		TRACE_FUNC();
+		return 0;
+	}
 
+	int sub = sub_length, cur_count = 0, power = 0, neg = 0;
+	size_t ret_len = 0, incremental = 0;
+	char *ptr = NULL ;
+
+	ret_len = get_initial_off(&global_vector[sub]);
+	while(global_vector.at(sub++) != '#')
+		;
+
+	while(sub < sub_length)
+	{
+		power = get_power(&global_vector[sub]);
+		if(power == 0)	power = 1;
+
+		while(power -- )
+		{
+			ptr = &global_vector[sub];
+			while(*ptr != '#' && *ptr != '^')
+			{
+				neg = 0 ;
+				if(*ptr == '-')
+				{
+					++ptr;
+					neg = 1;
+				}
+				incremental = 0;
+				while(isdigit(*ptr))
+				{
+					incremental *= 10;
+					incremental += (*ptr++ -'0');
+				}
+				if(neg)
+					ret_len -= incremental;
+				else
+					ret_len += incremental;
+				++cur_count;
+				if(cur_count == count)
+					return ret_len;
+				if(*ptr == '^' || *ptr == '#')
+					continue;
+				++ptr;
+			}
+		}
+	}
 }
 
 off_t get_initial_off(char *p)
@@ -1076,7 +1176,7 @@ void pp(std::vector<char> v)
 	std::vector<char>::iterator iter = v.begin();
 	while(iter != v.end())
 	{
-		cout<< *iter++ <<"," ;
+		cout<< *iter++ <<"" ;
 	}
 	cout<<endl;
 }
