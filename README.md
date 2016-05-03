@@ -10,7 +10,6 @@
 
 ### BY
 
-- **name:**  *bingJiao*
 - **locate at:**  *Hu Nan university*
 
 ---
