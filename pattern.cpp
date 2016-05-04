@@ -34,38 +34,38 @@ using namespace std;
 
 void add_elem(pid_t id, off_t logical_offset, off_t physical_offset, size_t length)
 {
-	if(o_id == 0)
-		o_id = id;
-	if(o_id == id )
+	if(pattern_o_id == 0)
+		pattern_o_id = id;
+	if(pattern_o_id == id )
 	{
-		o_logical.push_back(logical_offset);
-		o_physical.push_back(physical_offset);
-		o_length.push_back(length);
+		pattern_o_logical.push_back(logical_offset);
+		pattern_o_physical.push_back(physical_offset);
+		pattern_o_length.push_back(length);
 	}else
 	{
-		if(pattern_init(o_id))
+		if(pattern_init(pattern_o_id))
 			;
-		std::vector<off_t>().swap(o_logical);
-		std::vector<off_t>().swap(o_physical);
-		std::vector<size_t>().swap(o_length);
-		o_id = id;
+		std::vector<off_t>().swap(pattern_o_logical);
+		std::vector<off_t>().swap(pattern_o_physical);
+		std::vector<size_t>().swap(pattern_o_length);
+		pattern_o_id = id;
 	}
 }
 
 bool pattern_init(pid_t id)
 {
-	char p_logical[o_logical.size()*8];
+	char p_logical[pattern_o_logical.size()*8];
 	memset(p_logical, 0, sizeof(p_logical));
 
-	char p_physical[o_logical.size()*8];
+	char p_physical[pattern_o_logical.size()*8];
 	memset(p_physical, 0, sizeof(p_physical));
 
-	char p_length[o_logical.size()*8];
+	char p_length[pattern_o_logical.size()*8];
 	memset(p_length, 0, sizeof(p_length));
 
-	pattern_detection(o_logical);
-	pattern_detection(o_physical);
-	pattern_detection(o_length);
+	pattern_detection(pattern_o_logical, p_logical);
+	pattern_detection(pattern_o_physical, p_physical);
+	pattern_detection(pattern_o_lengthm p_length);
 
 	if(p_logical == NULL || p_physical == NULL || p_length == NULL)
 	{
@@ -76,11 +76,11 @@ bool pattern_init(pid_t id)
 	if (insert_to_pattern_entry(id, p_logical, p_physical, p_length))
 		;
 
-	pattern_entry.insert(pair<pid_t, pattern_unit>(id, p_unit));
+	// pattern_entry.insert(pair<pid_t, pattern_unit>(id, p_unit));
 	return 1;
 }
 
-bool insert_to_global(pid_t id, char *p_logical, char *p_physical, char *p_length)
+bool insert_to_pattern_entry(pid_t id, char *p_logical, char *p_physical, char *p_length)
 {
 	pattern_unit p_unit;
 
@@ -180,7 +180,7 @@ void pattern_detection(std::vector<off_t> ori_offset, char *p_offset)
 				if(top == NULL)
 				{
 					TRACE_FUNC();
-					return NULL;
+					return;
 				}
 				break;
 			}else if(k == 1)
@@ -188,7 +188,7 @@ void pattern_detection(std::vector<off_t> ori_offset, char *p_offset)
 				if(*top != '#')
 				{
 					TRACE_FUNC();
-					return NULL;
+					return;
 				}
 				if(flag == 0 && power == 0)
 				{
@@ -319,7 +319,7 @@ void pattern_detection(std::vector<size_t> ori_offlen, char *p_offlen)
 				if(top == NULL)
 				{
 					TRACE_FUNC();
-					return NULL;
+					return ;
 				}
 				break;
 			}else if(k == 1)
@@ -327,7 +327,7 @@ void pattern_detection(std::vector<size_t> ori_offlen, char *p_offlen)
 				if(*top != '#')
 				{
 					TRACE_FUNC();
-					return NULL;
+					return ;
 				}
 				if(flag == 0 && power == 0)
 				{
@@ -425,7 +425,7 @@ bool get_pid_pattern(pid_t &id, off_t &phy_offset, size_t &length, off_t offset)
 	{
 		sub_logical = iter->second.logical_offset;
 		sub_physical = iter->second.physical_offset;
-		count = find_in_pattern_logical(offset, int sub_logical, int sub_physical);
+		count = find_in_pattern_logical(offset, sub_logical, sub_physical);
 		if(count != 0)
 		{
 			sub_length = iter->second.length;
@@ -441,7 +441,7 @@ bool get_pid_pattern(pid_t &id, off_t &phy_offset, size_t &length, off_t offset)
 	}
 	phy_offset = find_relevant_physical(sub_physical, sub_length, count);
 	length = find_relevant_length(sub_physical, sub_end, count);
-	if(relevant_physical == 0 && relevant_length == 0 )
+	if(phy_offset == 0 && length == 0 )
 	{
 		TRACE_FUNC();
 		return 0;
@@ -466,7 +466,7 @@ bool find_rel_elem(pid_t id, off_t logical_offset, off_t &relevant_physical, siz
 	sub_end = iter->second.end_sub;
 
 	int count = 0;
-	count find_in_pattern_logical(logical_offset, sub_logical);
+	count = find_in_pattern_logical(logical_offset, sub_logical, sub_physical);
 
 	relevant_physical = find_relevant_physical(sub_physical, sub_length, count);
 	relevant_length = find_relevant_length(sub_physical, sub_end, count);
@@ -491,7 +491,7 @@ int find_in_pattern_logical(off_t logical_offset, int sub_logical, int sub_physi
 
 	int ret_count = 0, count = 0, power = 0, neg = 0, sub = sub_logical;
 	off_t cur_off = 0, incremental = 0;
-	char *ptr == NULL;
+	char *ptr = NULL;
 
 	cur_off = get_initial_off(&global_vector[sub]);
 	while(global_vector.at(sub++) != '#')
@@ -920,7 +920,7 @@ void get_pat(char *ptr, char *stop_ptr, int *pat, int k, int n)
 
 	//then get the pat between ptr and stop_ptr;
 	int neg = 0, x = 0;
-	char cur_ptr = ptr;
+	char *cur_ptr = ptr;
 	while(k)
 	{
 		neg = 0;

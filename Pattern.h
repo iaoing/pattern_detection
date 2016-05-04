@@ -33,19 +33,19 @@ typedef struct
 	int end_sub;
 }pattern_unit;
 
-std::map<pid_t, pattern_unit> global_map_entry;
-std::vector<char> global_vector;
+static std::map<pid_t, pattern_unit> global_map_entry;
+static std::vector<char> global_vector;
 
-pid_t o_id = 0;
-std::vector<off_t> o_logical;
-std::vector<off_t> o_physical;
-std::vector<size_t> o_length;
+static pid_t pattern_o_id = 0;
+static std::vector<off_t> pattern_o_logical;
+static std::vector<off_t> pattern_o_physical;
+static std::vector<size_t> pattern_o_length;
 
 void add_elem(pid_t id, off_t logical_offset, off_t physical_offset, size_t length);
 
 bool pattern_init(pid_t id);
 
-bool insert_to_global(pid_t id, char *p_logical, char *p_physical, char *p_length);
+bool insert_to_pattern_entry(pid_t id, char *p_logical, char *p_physical, char *p_length);
 bool insert_to_vector(char *pat);
 
 void pattern_detection(std::vector<off_t> original, char *pat_string);

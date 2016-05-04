@@ -50,7 +50,13 @@
      path = cf_ptr->path;	//this is the full file path
    ```
 
-   - So the most important thing is to get the **pid** !     
+   - So the most important thing is to get the **pid** ! 
+
+   - **NOTE! NOTE! NOTE! NOTE!**
+
+     Chun_map is private class in Index.h, so can't use it in plfs.cpp or other function!
+
+     **So** , how can we to get the **fd** and **path** !
 
 5. ​
 
@@ -74,6 +80,8 @@
   ```
 
 - **find read off and read** 
+
+  **NOTE!!!!!!     THE FOLLOW CODE IS WRROR!** 
 
   ```c++
   + plfs.cpp: lines 9
