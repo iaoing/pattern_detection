@@ -74,6 +74,11 @@ int canMerge(char *top, int *ori, int *pat, int power, int count, int k);
 char *mergePat(char *top, int power, int count, int k, int flag);
 
 
+//This is read use pattern detection
+int read_from_pattern(char *buf, size_t size, off_t offset);
+
+bool get_pid_pattern(pid_t &id, off_t &phy_offset, size_t &length, off_t offset);
+
 //below functions that can to find the corresponding physical offset depanding the input ,
 //inout is a logical offset. depanding the logical offset we can find the corresponding
 //physical offset and the length;

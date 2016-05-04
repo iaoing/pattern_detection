@@ -1,6 +1,6 @@
-// #include <errno.h>
+#include <errno.h>
 // #include "COPYRIGHT.h"
-// #include <string>
+#include <string>
 // #include <fstream>
 // #include <iostream>
 // #include <fcntl.h>
@@ -17,11 +17,11 @@
 // #include <iostream>
 // #include <sstream>
 // #include <stdlib.h>
-
+#include <unistd.h>
 // #include <time.h>
 // #include "plfs.h"
 // #include "Container.h"
-// #include "Index.h"
+#include "Index.h"
 // #include "plfs_private.h"
 #include <stdio.h>
 #include <string.h>
@@ -391,6 +391,62 @@ void pattern_detection(std::vector<size_t> ori_offlen, char *p_offlen)
 		//下面这条语句就是讲窗口向前滑动k个距离
 		delta_sub += k;
 	}
+}
+
+int read_from_pattern(char *buf, size_t size, off_t offset)
+{
+	off_t phy_offset;
+	size_t length;
+	pid_t id;
+	int fd = -1;
+	string path;
+	if(get_pid_pattern(id, phy_offset, length, offset))
+		;
+
+	ChunkFile *cf_ptr = &(chunk_map[id]);
+	fd = cf_ptr->fd;
+    path = cf_ptr->path;
+
+    if(fd < 0)
+    {
+    	TRACE_FUNC();
+    	return -errno;
+    }
+	ret = Util::Pread( fd, buf, length, phy_offset );
+	return ret;
+
+}
+
+bool get_pid_pattern(pid_t &id, off_t &phy_offset, size_t &length, off_t offset)
+{
+	std::map<pid_t, pattern_unit>::iterator iter;
+	int count = 0, sub_logical = 0, sub_physical = 0, sub_length, sub_end = 0;
+	for(iter = global_map_entry.begin(); iter != global_map_entry.end(); ++iter)
+	{
+		sub_logical = iter->second.logical_offset;
+		sub_physical = iter->second.physical_offset;
+		count = find_in_pattern_logical(offset, int sub_logical, int sub_physical);
+		if(count != 0)
+		{
+			sub_length = iter->second.length;
+			sub_end = iter->second.end_sub;
+			id = iter->first;
+			break;
+		}
+	}
+	if(count == 0)
+	{
+		TRACE_FUNC();
+		return 0;
+	}
+	phy_offset = find_relevant_physical(sub_physical, sub_length, count);
+	length = find_relevant_length(sub_physical, sub_end, count);
+	if(relevant_physical == 0 && relevant_length == 0 )
+	{
+		TRACE_FUNC();
+		return 0;
+	}
+	return 1;
 }
 
 bool find_rel_elem(pid_t id, off_t logical_offset, off_t &relevant_physical, size_t &relevant_length)
