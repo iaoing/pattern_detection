@@ -83,13 +83,24 @@
 
   **NOTE!!!!!!     THE FOLLOW CODE IS WRROR!** 
 
-  ```c++
-  + plfs.cpp: lines 9
-    #include "Pattern.h"
-  - plfs.cpp: lines 854 - 858
-  + plfs.cpp: lines 860
-    ret = read_from_pattern(*buf, size, offset);
+  ```markdown
+  ~~\+ plfs.cpp: lines 9~~
+
+  ~~\#include "Pattern.h"~~
+
+  ~~\- plfs.cpp: lines 854 - 858~~
+
+  ~~\+ plfs.cpp: lines 860~~
+
+  ~~ret = read_from_pattern(*buf, size, offset);~~
+  ```
+
+- **So we can that to read use pattern** 
+
+  ```
+  - plfs.cpp: lines 659 - 650
+  + plfs.cpp: lines 652
+    ret = read_from_pattern(task->fd, task->buf, task->chunk_id, task->logical_offset);
   ```
 
   ​
-

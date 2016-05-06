@@ -36,31 +36,34 @@ void add_elem(pid_t id, off_t logical_offset, off_t physical_offset, size_t leng
 {
 	if(pattern_o_id == 0)
 		pattern_o_id = id;
-	if(pattern_o_id == id )
-	{
-		pattern_o_logical.push_back(logical_offset);
-		pattern_o_physical.push_back(physical_offset);
-		pattern_o_length.push_back(length);
-	}else
-	{
-		if(pattern_init(pattern_o_id))
-			;
-		std::vector<off_t>().swap(pattern_o_logical);
-		std::vector<off_t>().swap(pattern_o_physical);
-		std::vector<size_t>().swap(pattern_o_length);
-		pattern_o_id = id;
-	}
+	// if(pattern_o_id == id )
+	// {
+	// 	pattern_o_logical.push_back(logical_offset);
+	// 	pattern_o_physical.push_back(physical_offset);
+	// 	pattern_o_length.push_back(length);
+	// }else
+	// {
+	// 	if(pattern_init(pattern_o_id))
+	// 		;
+	// 	std::vector<off_t>().swap(pattern_o_logical);
+	// 	std::vector<off_t>().swap(pattern_o_physical);
+	// 	std::vector<size_t>().swap(pattern_o_length);
+	// 	pattern_o_id = id;
+	// }
+	pattern_o_logical.push_back(logical_offset);
+	pattern_o_physical.push_back(physical_offset);
+	pattern_o_length.push_back(length);
 }
 
 bool pattern_init(pid_t id)
 {
-	char p_logical[pattern_o_logical.size()*8];
+	char p_logical[pattern_o_logical.size()*32];
 	memset(p_logical, 0, sizeof(p_logical));
 
-	char p_physical[pattern_o_logical.size()*8];
+	char p_physical[pattern_o_logical.size()*32];
 	memset(p_physical, 0, sizeof(p_physical));
 
-	char p_length[pattern_o_logical.size()*8];
+	char p_length[pattern_o_logical.size()*32];
 	memset(p_length, 0, sizeof(p_length));
 
 	pattern_detection(pattern_o_logical, p_logical);
@@ -75,6 +78,9 @@ bool pattern_init(pid_t id)
 
 	if (insert_to_pattern_entry(id, p_logical, p_physical, p_length))
 		;
+	std::vector<off_t>().swap(pattern_o_logical);
+	std::vector<off_t>().swap(pattern_o_physical);
+	std::vector<size_t>().swap(pattern_o_length);
 
 	// pattern_entry.insert(pair<pid_t, pattern_unit>(id, p_unit));
 	return 1;
@@ -393,25 +399,29 @@ void pattern_detection(std::vector<size_t> ori_offlen, char *p_offlen)
 	}
 }
 
-int read_from_pattern(char *buf, size_t size, off_t offset)
+int read_from_pattern(int fd, char *buf, pid_t chunk_id, off_t offset)
 {
+	int ret = 0;
 	off_t phy_offset;
 	size_t length;
 	pid_t id;
-	int fd = -1;
-	string path;
+
 	if(get_pid_pattern(id, phy_offset, length, offset))
 		;
+	else
+	{
+		TRACE_FUNC();
+		return 0;
+	}
 
-	ChunkFile *cf_ptr = &(chunk_map[id]);
-	fd = cf_ptr->fd;
-    path = cf_ptr->path;
+	// if(find_rel_elem(id, offset, phy_offset, length))
+	// 	;
+	// else
+	// {
+	// 	TRACE_FUNC();
+	// 	return 0;
+	// }
 
-    if(fd < 0)
-    {
-    	TRACE_FUNC();
-    	return -errno;
-    }
 	ret = Util::Pread( fd, buf, length, phy_offset );
 	return ret;
 
@@ -426,7 +436,7 @@ bool get_pid_pattern(pid_t &id, off_t &phy_offset, size_t &length, off_t offset)
 		sub_logical = iter->second.logical_offset;
 		sub_physical = iter->second.physical_offset;
 		count = find_in_pattern_logical(offset, sub_logical, sub_physical);
-		if(count != 0)
+		if(count != -1)
 		{
 			sub_length = iter->second.length;
 			sub_end = iter->second.end_sub;
@@ -434,7 +444,7 @@ bool get_pid_pattern(pid_t &id, off_t &phy_offset, size_t &length, off_t offset)
 			break;
 		}
 	}
-	if(count == 0)
+	if(count == -1)
 	{
 		TRACE_FUNC();
 		return 0;
@@ -486,7 +496,7 @@ int find_in_pattern_logical(off_t logical_offset, int sub_logical, int sub_physi
 		|| sub_logical > global_vector.end() - global_vector.begin())
 	{
 		TRACE_FUNC();
-		return 0;
+		return -1;
 	}
 
 	int ret_count = 0, count = 0, power = 0, neg = 0, sub = sub_logical;
@@ -539,7 +549,7 @@ int find_in_pattern_logical(off_t logical_offset, int sub_logical, int sub_physi
 			;
 	}
 	TRACE_FUNC();
-	return 0;
+	return -1;
 }
 
 off_t find_relevant_physical(int sub_physical, int sub_length, int count)
@@ -551,11 +561,16 @@ off_t find_relevant_physical(int sub_physical, int sub_length, int count)
 		return 0;
 	}
 
+
 	int sub = sub_physical, cur_count = 0, power = 0, neg = 0;
 	off_t ret_off = 0, incremental = 0;
 	char *ptr = NULL ;
 
 	ret_off = get_initial_off(&global_vector[sub]);
+	if(count == 0)
+	{
+		return ret_off;	
+	}
 	while(global_vector.at(sub++) != '#')
 		;
 
@@ -610,6 +625,10 @@ size_t find_relevant_length(int sub_length, int sub_end, int count)
 	char *ptr = NULL ;
 
 	ret_len = get_initial_off(&global_vector[sub]);
+	if(count == 0)
+	{
+		return ret_off;	
+	}
 	while(global_vector.at(sub++) != '#')
 		;
 

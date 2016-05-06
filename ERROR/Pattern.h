@@ -75,7 +75,7 @@ char *mergePat(char *top, int power, int count, int k, int flag);
 
 
 //This is read use pattern detection
-int read_from_pattern(char *buf, size_t size, off_t offset);
+int read_from_pattern(int fd, char *buf, pid_t id, off_t offset);
 
 bool get_pid_pattern(pid_t &id, off_t &phy_offset, size_t &length, off_t offset);
 
