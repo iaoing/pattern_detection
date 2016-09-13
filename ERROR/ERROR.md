@@ -1,3 +1,0 @@
-- Some **ERROR** in this code.
-- This code is not in common use, so ...
-- Maybe it's also have some strong point, but not consider at this time.

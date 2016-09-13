@@ -1,0 +1,501 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACCESSFILE	.\Container.h	35;"	d
+Access	.\Container.cpp	/^int Container::Access( const string &path, int mask ) {$/;"	f	class:Container
+Access	.\Util.cpp	/^int Util::Access( const char *path, int mode ) {$/;"	f	class:Util
+BLKSIZE	.\Container.cpp	19;"	d	file:
+CHMOD	.\Container.h	/^        CHMOD, CHOWN, UTIME, RMDIR, MKDIR$/;"	e	enum:DirectoryOperation
+CHOWN	.\Container.h	/^        CHMOD, CHOWN, UTIME, RMDIR, MKDIR$/;"	e	enum:DirectoryOperation
+Chmod	.\Container.cpp	/^int Container::Chmod( const string &path, mode_t mode ) {$/;"	f	class:Container
+Chmod	.\Util.cpp	/^int Util::Chmod( const char *path, int flags ) {$/;"	f	class:Util
+Chown	.\Container.cpp	/^int Container::Chown( const string &path, uid_t uid, gid_t gid ) {$/;"	f	class:Container
+Chown	.\Util.cpp	/^int Util::Chown( const char *path, uid_t uid, gid_t gid ) {$/;"	f	class:Util
+ChunkFile	.\Index.h	/^} ChunkFile;$/;"	t	typeref:struct:__anon3
+Close	.\Util.cpp	/^int Util::Close( int fd ) {$/;"	f	class:Util
+Close	.\WriteFile.cpp	/^int WriteFile::Close() {$/;"	f	class:WriteFile
+Closedir	.\Util.cpp	/^int Util::Closedir( DIR *dp ) {$/;"	f	class:Util
+Container	.\Container.h	/^class Container {$/;"	c
+ContainerEntry	.\Index.h	/^class ContainerEntry : HostEntry {$/;"	c
+Creat	.\Util.cpp	/^int Util::Creat( const char *path, mode_t mode ) {$/;"	f	class:Util
+DATAPREFIX	.\Container.h	27;"	d
+DEFAULT_MODE	.\Container.h	23;"	d
+DROPPINGPREFIX	.\Container.h	26;"	d
+DROPPING_MODE	.\Container.h	24;"	d
+Debug	.\Util.cpp	/^Util::Debug( const char *format, ... ) {$/;"	f	class:Util
+Debug	.\Util.cpp	/^Util::Debug( const char *format, va_list args ) {$/;"	f	class:Util
+Debug	.\Util.cpp	/^void Util::Debug( const char *format, ... ) { return; }$/;"	f	class:Util
+Debug	.\Util.cpp	/^void Util::Debug( const char *format, va_list args ) { return; }$/;"	f	class:Util
+DirectoryOperation	.\Container.h	/^DirectoryOperation {$/;"	g
+Dump	.\LogMessage.cpp	/^string LogMessage::Dump() {$/;"	f	class:LogMessage
+EISDIR_DEBUG	.\plfs_private.h	14;"	d
+ENTER_IO	.\Util.cpp	50;"	d	file:
+ENTER_MUX	.\Util.cpp	53;"	d	file:
+ENTER_PATH	.\Util.cpp	54;"	d	file:
+ENTER_UTIL	.\Util.cpp	49;"	d	file:
+EXIT_IO	.\Util.cpp	51;"	d	file:
+EXIT_UTIL	.\Util.cpp	52;"	d	file:
+Flush	.\LogMessage.cpp	/^void LogMessage::Flush() {$/;"	f	class:LogMessage
+Fsync	.\Util.cpp	/^int Util::Fsync( int fd) {$/;"	f	class:Util
+GLOBALCHUNK	.\Container.h	38;"	d
+GLOBALINDEX	.\Container.h	37;"	d
+Getgid	.\Util.cpp	/^gid_t Util::Getgid() {$/;"	f	class:Util
+Getuid	.\Util.cpp	/^uid_t Util::Getuid() {$/;"	f	class:Util
+HASH_BY_NODE	.\plfs.cpp	/^    HASH_BY_NODE,$/;"	e	enum:hashMethod	file:
+HASH_BY_PATH	.\plfs.cpp	/^    HASH_BY_PATH,$/;"	e	enum:hashMethod	file:
+HASH_MAP	.\Util.h	44;"	d
+HOSTDIRPREFIX	.\Container.h	25;"	d
+HostEntry	.\Index.h	/^        HostEntry( off_t o, size_t s, pid_t p ) {$/;"	f	class:HostEntry
+HostEntry	.\Index.h	/^        HostEntry() { }$/;"	f	class:HostEntry
+HostEntry	.\Index.h	/^class HostEntry {$/;"	c
+INDEXPREFIX	.\Container.h	28;"	d
+Index	.\Index.cpp	/^Index::Index( string logical ) : Metadata::Metadata() {$/;"	f	class:Index
+Index	.\Index.cpp	/^Index::Index( string logical, int fd ) : Metadata::Metadata() {$/;"	f	class:Index
+Index	.\Index.h	/^class Index : public Metadata {$/;"	c
+IndexFileInfo	.\Index.cpp	/^IndexFileInfo::IndexFileInfo(){$/;"	f	class:IndexFileInfo
+IndexFileInfo	.\Index.h	/^class IndexFileInfo{$/;"	c
+IndexerArgs	.\Container.cpp	/^} IndexerArgs;$/;"	t	typeref:struct:__anon1	file:
+IndexerTask	.\Container.h	/^} IndexerTask;$/;"	t	typeref:struct:__anon2
+LOG_BUFFER_SZ	.\LogMessage.cpp	11;"	d	file:
+Link	.\Util.cpp	/^int Util::Link( const char *path, const char *to ) {$/;"	f	class:Util
+LogMessage	.\LogMessage.h	/^class LogMessage : public ostringstream {$/;"	c
+Lseek	.\Util.cpp	/^int Util::Lseek( int fildes, off_t offset, int whence, off_t *result ) {$/;"	f	class:Util
+Lstat	.\Util.cpp	/^int Util::Lstat( const char *path, struct stat *st ) {$/;"	f	class:Util
+MAP_ITR	.\Index.h	189;"	d
+MAP_NOCACHE	.\Index.cpp	31;"	d	file:
+MAP_NOCACHE	.\Util.h	38;"	d
+MAX_HOSTDIRS	.\plfs.cpp	34;"	d	file:
+METADIR	.\Container.h	29;"	d
+MKDIR	.\Container.h	/^        CHMOD, CHOWN, UTIME, RMDIR, MKDIR$/;"	e	enum:DirectoryOperation
+Metadata	.\Metadata.h	/^    Metadata() { $/;"	f	class:Metadata
+Metadata	.\Metadata.h	/^class Metadata {$/;"	c
+Mkdir	.\Util.cpp	/^int Util::Mkdir( const char *path, mode_t mode ) {$/;"	f	class:Util
+Mknod	.\Util.cpp	/^int Util::Mknod( const char *path, mode_t mode, dev_t dev ) {$/;"	f	class:Util
+Mmap	.\Util.cpp	/^int Util::Mmap( size_t len, int fildes, void **retaddr) {$/;"	f	class:Util
+Modify	.\Container.cpp	/^int Container::Modify( DirectoryOperation type, $/;"	f	class:Container
+Munmap	.\Util.cpp	/^int Util::Munmap(void *addr,size_t len) {$/;"	f	class:Util
+MutexLock	.\Util.cpp	/^int Util::MutexLock(  pthread_mutex_t *mux , const char * where ) {$/;"	f	class:Util
+MutexUnlock	.\Util.cpp	/^int Util::MutexUnlock( pthread_mutex_t *mux, const char *where ) {$/;"	f	class:Util
+NO_HASH	.\plfs.cpp	/^    NO_HASH,$/;"	e	enum:hashMethod	file:
+OPENPREFIX	.\Container.h	34;"	d
+O_CONCURRENT_WRITE	.\Util.cpp	38;"	d	file:
+Open	.\Util.cpp	/^int Util::Open( const char *path, int flags ) {$/;"	f	class:Util
+Open	.\Util.cpp	/^int Util::Open( const char *path, int flags, mode_t mode ) {$/;"	f	class:Util
+OpenError	.\Util.cpp	/^Util::OpenError(const char *file, const char *func, int line, int Err, pid_t p){$/;"	f	class:Util
+OpenFd	.\WriteFile.h	/^OpenFd {$/;"	s
+Opendir	.\Util.cpp	/^int Util::Opendir( const char *path, DIR **dp ) {$/;"	f	class:Util
+PARENT_ABSENT	.\Container.h	/^    PARENT_CREATED,PARENT_ABSENT    $/;"	e	enum:parentStatus
+PARENT_CREATED	.\Container.h	/^    PARENT_CREATED,PARENT_ABSENT    $/;"	e	enum:parentStatus
+PLFS_API	.\plfs.h	/^    PLFS_API, PLFS_POSIX, PLFS_MPIIO$/;"	e	enum:__anon6
+PLFS_ENTER	.\plfs.cpp	37;"	d	file:
+PLFS_ENTER2	.\plfs.cpp	39;"	d	file:
+PLFS_EXIT	.\plfs.cpp	45;"	d	file:
+PLFS_MPIIO	.\plfs.h	/^    PLFS_API, PLFS_POSIX, PLFS_MPIIO$/;"	e	enum:__anon6
+PLFS_PATH_NOTREQUIRED	.\plfs.cpp	/^    PLFS_PATH_NOTREQUIRED,$/;"	e	enum:requirePlfsPath	file:
+PLFS_PATH_REQUIRED	.\plfs.cpp	/^    PLFS_PATH_REQUIRED,$/;"	e	enum:requirePlfsPath	file:
+PLFS_POSIX	.\plfs.h	/^    PLFS_API, PLFS_POSIX, PLFS_MPIIO$/;"	e	enum:__anon6
+PlfsConf	.\plfs_private.h	/^} PlfsConf;$/;"	t	typeref:struct:__anon10
+PlfsMount	.\plfs_private.h	/^} PlfsMount;$/;"	t	typeref:struct:__anon9
+Plfs_close_opt	.\plfs.h	/^} Plfs_close_opt;$/;"	t	typeref:struct:__anon8
+Plfs_fd	.\OpenFile.cpp	/^Plfs_fd::Plfs_fd( WriteFile *wf, Index *i, pid_t pi, mode_t m, const char *p ) :$/;"	f	class:Plfs_fd
+Plfs_fd	.\OpenFile.h	/^class Plfs_fd : public Metadata {$/;"	c
+Plfs_fd	.\plfs.h	/^    typedef void * Plfs_fd;$/;"	t
+Plfs_open_opt	.\plfs.h	/^} Plfs_open_opt;$/;"	t	typeref:struct:__anon7
+Pread	.\Util.cpp	/^ssize_t Util::Pread( int fd, void *buf, size_t size, off_t off ) {$/;"	f	class:Util
+Pwrite	.\Util.cpp	/^ssize_t Util::Pwrite( int fd, const void *buf, size_t size, off_t off ) {$/;"	f	class:Util
+RMDIR	.\Container.h	/^        CHMOD, CHOWN, UTIME, RMDIR, MKDIR$/;"	e	enum:DirectoryOperation
+Read	.\Util.cpp	/^ssize_t Util::Read( int fd, void *buf, size_t size) {$/;"	f	class:Util
+ReadTask	.\plfs.cpp	/^} ReadTask;$/;"	t	typeref:struct:__anon4	file:
+ReaderArgs	.\plfs.cpp	/^} ReaderArgs;$/;"	t	typeref:struct:__anon5	file:
+Readlink	.\Util.cpp	/^ssize_t Util::Readlink(const char*link, char *buf, size_t bufsize) {$/;"	f	class:Util
+Rename	.\Util.cpp	/^int Util::Rename( const char *path, const char *to ) {$/;"	f	class:Util
+Rmdir	.\Util.cpp	/^int Util::Rmdir( const char *path ) {$/;"	f	class:Util
+SLOW_UTIL	.\Util.cpp	36;"	d	file:
+STR	.\Util.h	48;"	d
+STR_EXPAND	.\Util.h	47;"	d
+SVNVERS	.\plfs_private.h	12;"	d
+SeriousError	.\Util.cpp	/^Util::SeriousError( string msg, pid_t pid ) {$/;"	f	class:Util
+Setfsgid	.\Util.cpp	/^int Util::Setfsgid( gid_t g ) {$/;"	f	class:Util
+Setfsuid	.\Util.cpp	/^int Util::Setfsuid( uid_t u ) {$/;"	f	class:Util
+Stat	.\Util.cpp	/^int Util::Stat( const char *path, struct stat * file_info)$/;"	f	class:Util
+Statvfs	.\Util.cpp	/^int Util::Statvfs( const char *path, struct statvfs* stbuf ) {$/;"	f	class:Util
+Symlink	.\Util.cpp	/^int Util::Symlink( const char *path, const char *to ) {$/;"	f	class:Util
+ThreadPool	.\ThreadPool.cpp	/^ThreadPool::ThreadPool( size_t size, void *(*func) (void *), void *args ) {$/;"	f	class:ThreadPool
+ThreadPool	.\ThreadPool.h	/^class ThreadPool {$/;"	c
+Truncate	.\Container.cpp	/^int Container::Truncate( const string &path, off_t offset ) {$/;"	f	class:Container
+Truncate	.\Util.cpp	/^int Util::Truncate( const char *path, off_t length ) {$/;"	f	class:Util
+UTIME	.\Container.h	/^        CHMOD, CHOWN, UTIME, RMDIR, MKDIR$/;"	e	enum:DirectoryOperation
+Unlink	.\Util.cpp	/^int Util::Unlink( const char *path ) {$/;"	f	class:Util
+Util	.\Util.h	/^class Util {$/;"	c
+Utime	.\Container.cpp	/^int Container::Utime( const string &path, const struct utimbuf *buf ) {$/;"	f	class:Container
+Utime	.\Util.cpp	/^int Util::Utime( const char *path, const struct utimbuf *buf ) {$/;"	f	class:Util
+VERSIONPREFIX	.\Container.h	30;"	d
+Write	.\Util.cpp	/^ssize_t Util::Write( int fd, const void *buf, size_t size) {$/;"	f	class:Util
+WriteFile	.\WriteFile.cpp	/^WriteFile::WriteFile( string path, string hostname, $/;"	f	class:WriteFile
+WriteFile	.\WriteFile.h	/^class WriteFile : public Metadata {$/;"	c
+Writen	.\Util.cpp	/^ssize_t Util::Writen( int fd, const void *vptr, size_t n ) {$/;"	f	class:Util
+_UTIL_H_	.\Util.h	2;"	d
+__Container_H__	.\Container.h	2;"	d
+__Index_H__	.\Index.h	2;"	d
+__LogMessage_H__	.\LogMessage.h	2;"	d
+__METADATA_H__	.\Metadata.h	2;"	d
+__OpenFile_H__	.\OpenFile.h	2;"	d
+__PLFS_COPYRIGHT_H__	.\COPYRIGHT.h	2;"	d
+__PLFS_H_	.\plfs.h	2;"	d
+__PLFS_PRIVATE__	.\plfs_private.h	2;"	d
+__ThreadPool_H__	.\ThreadPool.h	2;"	d
+__WriteFile_H__	.\WriteFile.h	2;"	d
+abut	.\Index.cpp	/^bool ContainerEntry::abut( const ContainerEntry &other ) {$/;"	f	class:ContainerEntry
+abut	.\Index.cpp	/^bool HostEntry::abut( const HostEntry &other ) {$/;"	f	class:HostEntry
+addBytes	.\Util.cpp	/^void Util::addBytes( string function, size_t size ) {$/;"	f	class:Util
+addFunction	.\LogMessage.cpp	/^void LogMessage::addFunction( const char * func ) {$/;"	f	class:LogMessage
+addIds	.\LogMessage.cpp	/^void LogMessage::addIds( uid_t uid, gid_t gid ) {$/;"	f	class:LogMessage
+addMeta	.\Container.cpp	/^int Container::addMeta( off_t last_offset, size_t total_bytes, $/;"	f	class:Container
+addMeta	.\Metadata.h	/^    void addMeta( off_t offset, size_t bytes ) {$/;"	f	class:Metadata
+addOff	.\LogMessage.cpp	/^void LogMessage::addOff( off_t off ) {$/;"	f	class:LogMessage
+addOpenrecord	.\Container.cpp	/^int Container::addOpenrecord( const string &path, const string &host, pid_t pid) {$/;"	f	class:Container
+addPid	.\LogMessage.cpp	/^void LogMessage::addPid( pid_t pid ) {$/;"	f	class:LogMessage
+addSize	.\LogMessage.cpp	/^void LogMessage::addSize( size_t size ) {$/;"	f	class:LogMessage
+addTime	.\LogMessage.cpp	/^void LogMessage::addTime( double t ) {$/;"	f	class:LogMessage
+addTime	.\Util.cpp	/^void Util::addTime( string function, double elapsed, bool error ) {$/;"	f	class:Util
+addWrite	.\Index.cpp	/^void Index::addWrite( off_t offset, size_t length, pid_t pid, $/;"	f	class:Index
+addWrite	.\Metadata.h	/^    void addWrite( off_t offset, size_t bytes ) {$/;"	f	class:Metadata
+addWriter	.\WriteFile.cpp	/^int WriteFile::addWriter( pid_t pid, bool child ) {$/;"	f	class:WriteFile
+addWriter	.\plfs.cpp	/^addWriter(WriteFile *wf, pid_t pid, const char *path, mode_t mode, $/;"	f
+aggregateIndices	.\Container.cpp	/^int Container::aggregateIndices(const string &path, Index *index) {$/;"	f	class:Container
+backends	.\plfs_private.h	/^    vector<string> backends;    \/\/ a list of physical locations $/;"	m	struct:__anon9
+bandwidthToString	.\Util.cpp	/^string Util::bandwidthToString( HASH_MAP<string,double>::iterator itr,$/;"	f	class:Util
+begin_timestamp	.\Index.h	/^        double begin_timestamp;$/;"	m	class:HostEntry
+buf	.\plfs.cpp	/^    char *buf;$/;"	m	struct:__anon4	file:
+buffer_filled	.\Index.h	/^        bool buffer_filled; \/\/ were we buffering but ran out of space? $/;"	m	class:Index
+buffer_index	.\plfs.h	/^    int  buffer_index;  \/* Buffer index yes\/no                      *\/$/;"	m	struct:__anon7
+buffer_mbs	.\plfs_private.h	/^    size_t buffer_mbs;  \/\/ how many mbs to buffer for write indexing$/;"	m	struct:__anon10
+buffering	.\Index.h	/^        bool buffering;    \/\/ are we buffering the index on write?$/;"	m	class:Index
+bytesToBlocks	.\Container.cpp	/^blkcnt_t Container::bytesToBlocks( size_t total_bytes ) {$/;"	f	class:Container
+checkMask	.\Container.cpp	/^bool checkMask(int mask,int value) {$/;"	f
+chmodModify	.\Container.cpp	/^int Container::chmodModify (const string &path, mode_t mode) {$/;"	f	class:Container
+chmod_time	.\Util.h	/^        static double chmod_time;$/;"	m	class:Util
+chownModify	.\Container.cpp	/^int Container::chownModify(const string &path, uid_t uid, gid_t gid ) {$/;"	f	class:Container
+chunkFound	.\Index.cpp	/^int Index::chunkFound( int *fd, off_t *chunk_off, size_t *chunk_len, $/;"	f	class:Index
+chunkPath	.\Container.cpp	/^string Container::chunkPath( const string &hostdir, const char *type, $/;"	f	class:Container
+chunkPathFromIndexPath	.\Container.cpp	/^string Container::chunkPathFromIndexPath( const string &hostindex, pid_t pid ) {$/;"	f	class:Container
+chunk_id	.\Index.h	/^        int    chunk_id;$/;"	m	class:Index
+chunk_id	.\plfs.cpp	/^    pid_t chunk_id; \/\/ in order to stash fd's back into the index$/;"	m	struct:__anon4	file:
+chunk_map	.\Index.h	/^        vector< ChunkFile >       chunk_map;$/;"	m	class:Index
+chunk_offset	.\plfs.cpp	/^    off_t chunk_offset; $/;"	m	struct:__anon4	file:
+cleanupChmod	.\Container.cpp	/^int Container::cleanupChmod( const string &path, mode_t mode , int top , $/;"	f	class:Container
+cleanupChown	.\Container.cpp	/^int Container::cleanupChown( const string &path, uid_t uid, gid_t gid) {$/;"	f	class:Container
+cleanupReadIndex	.\Index.cpp	/^int Index::cleanupReadIndex( int fd, void *maddr, off_t length, int ret, $/;"	f	class:Index
+closeFd	.\WriteFile.cpp	/^int WriteFile::closeFd( int fd ) {$/;"	f	class:WriteFile
+closeIndex	.\WriteFile.cpp	/^int WriteFile::closeIndex( ) {$/;"	f	class:WriteFile
+compress	.\Index.cpp	/^void Index::compress() {$/;"	f	class:Index
+containerFromChunk	.\Container.cpp	/^string Container::containerFromChunk( string chunkpath ) {$/;"	f	class:Container
+containerMode	.\Container.cpp	/^mode_t Container::containerMode( mode_t mode ) {$/;"	f	class:Container
+contains	.\Index.cpp	/^bool HostEntry::contains( off_t offset ) const {$/;"	f	class:HostEntry
+counters	.\Util.cpp	/^HASH_MAP<string, off_t>  counters;$/;"	v
+create	.\Container.cpp	/^int Container::create( const string &expanded_path, const string &hostname,$/;"	f	class:Container
+createHelper	.\Container.cpp	/^int Container::createHelper(const string &expanded_path, const string &hostname,$/;"	f	class:Container
+createtime	.\WriteFile.h	/^        double createtime;$/;"	m	class:WriteFile
+ctime	.\OpenFile.h	/^        time_t    ctime;$/;"	m	class:Plfs_fd
+data_mux	.\WriteFile.h	/^        pthread_mutex_t    data_mux;   \/\/ to access our map of fds $/;"	m	class:WriteFile
+debug_from_stream	.\Index.cpp	/^int Index::debug_from_stream(void *addr){$/;"	f	class:Index
+dirMode	.\Container.cpp	/^mode_t Container::dirMode( mode_t mode ) {$/;"	f	class:Container
+direct_io	.\plfs_private.h	/^    bool direct_io; \/\/ a flag FUSE needs.  Sorry ADIO and API for the wasted bit$/;"	m	struct:__anon10
+discoverOpenHosts	.\Container.cpp	/^int Container::discoverOpenHosts( DIR *openhostsdir, set<string> *openhosts ) {$/;"	f	class:Container
+end_timestamp	.\Index.h	/^        double end_timestamp;$/;"	m	class:HostEntry
+err_msg	.\plfs_private.h	/^    string *err_msg;$/;"	m	struct:__anon10
+errors	.\Util.cpp	/^HASH_MAP<string, off_t>  errors;$/;"	v
+exists	.\Util.cpp	/^bool Util::exists( const char *path ) {$/;"	f	class:Util
+expandPath	.\plfs.cpp	/^expandPath(string logical, bool *mount_point, bool *expand_error, $/;"	f
+extend	.\WriteFile.cpp	/^int WriteFile::extend( off_t offset ) {$/;"	f	class:WriteFile
+extendFile	.\plfs.cpp	/^extendFile( Plfs_fd *of, string strPath, off_t offset ) {$/;"	f
+fd	.\Index.h	/^        int    fd;$/;"	m	class:Index
+fd	.\Index.h	/^    int fd;$/;"	m	struct:__anon3
+fd	.\WriteFile.h	/^    int fd;$/;"	m	struct:OpenFd
+fd	.\plfs.cpp	/^    int fd;$/;"	m	struct:__anon4	file:
+fd_mux	.\Index.h	/^        pthread_mutex_t    fd_mux;   \/\/ to allow thread safety$/;"	m	class:Index
+fds	.\WriteFile.h	/^        map< pid_t, OpenFd  > fds;$/;"	m	class:WriteFile
+fetchMeta	.\Container.cpp	/^string Container::fetchMeta( const string &metafile_name, $/;"	f	class:Container
+file	.\plfs_private.h	/^    string file;$/;"	m	struct:__anon10
+fileMode	.\Container.cpp	/^mode_t Container::fileMode( mode_t mode ) {$/;"	f	class:Container
+findSplits	.\Index.cpp	/^void Index::findSplits(ContainerEntry &e,set<off_t> &s) {$/;"	f	class:Index
+find_mount_point	.\plfs.cpp	/^find_mount_point(PlfsConf *pconf, string logical, bool &found) {$/;"	f
+find_read_tasks	.\plfs.cpp	/^find_read_tasks(Index *index, list<ReadTask> *tasks, size_t size, off_t offset,$/;"	f
+flattenIndex	.\Container.cpp	/^int Container::flattenIndex( const string &path, Index *index ) {$/;"	f	class:Container
+flush	.\Index.cpp	/^int Index::flush() {$/;"	f	class:Index
+flush	.\LogMessage.cpp	/^void LogMessage::flush() {$/;"	f	class:LogMessage
+freeIndex	.\Container.cpp	/^int Container::freeIndex( Index **index ) {$/;"	f	class:Container
+getAccessFilePath	.\Container.cpp	/^string Container::getAccessFilePath( const string& path ) {$/;"	f	class:Container
+getAtomicUnlinkPath	.\plfs.cpp	/^getAtomicUnlinkPath(string path) {$/;"	f
+getChunkFd	.\Index.cpp	/^int Index::getChunkFd( pid_t chunk_id ) {$/;"	f	class:Index
+getChunkPath	.\Container.cpp	/^string Container::getChunkPath( const string &container, const string &host, $/;"	f	class:Container
+getCreatorFilePath	.\Container.cpp	/^string Container::getCreatorFilePath( const string& path ) {$/;"	f	class:Container
+getCtime	.\OpenFile.h	/^        time_t     getCtime() { return ctime; }$/;"	f	class:Plfs_fd
+getDataPath	.\Container.cpp	/^string Container::getDataPath(const string &path, const string &host, int pid,$/;"	f	class:Container
+getFd	.\Index.h	/^        int getFd() { return fd; }$/;"	f	class:Index
+getFd	.\WriteFile.cpp	/^struct OpenFd * WriteFile::getFd( pid_t pid ) {$/;"	f	class:WriteFile
+getGlobalChunkPath	.\Container.cpp	/^string Container::getGlobalChunkPath( const string &physical ) {$/;"	f	class:Container
+getGlobalIndexPath	.\Container.cpp	/^string Container::getGlobalIndexPath( const string &physical ) {$/;"	f	class:Container
+getHostDirId	.\Container.cpp	/^size_t Container::getHostDirId( const string &hostname ) {$/;"	f	class:Container
+getHostDirPath	.\Container.cpp	/^string Container::getHostDirPath( const string & expanded_path, $/;"	f	class:Container
+getIndex	.\OpenFile.cpp	/^Index *Plfs_fd::getIndex( ) {$/;"	f	class:Plfs_fd
+getIndex	.\WriteFile.h	/^        Index * getIndex() {return index;}$/;"	f	class:WriteFile
+getIndexHostPath	.\Container.cpp	/^string Container::getIndexHostPath(const string &path,const string &host, int pid,$/;"	f	class:Container
+getIndexPath	.\Container.cpp	/^string Container::getIndexPath(const string &path, const string &host, int pid,$/;"	f	class:Container
+getMeta	.\Metadata.h	/^    void getMeta( off_t *offset, size_t *bytes ) {$/;"	f	class:Metadata
+getMetaDirPath	.\Container.cpp	/^string Container::getMetaDirPath( const string& strPath ) {$/;"	f	class:Container
+getMode	.\OpenFile.h	/^        mode_t     getMode()  { return this->mode; }$/;"	f	class:Plfs_fd
+getOpenHostsDir	.\Container.cpp	/^string Container::getOpenHostsDir( const string &path ) {$/;"	f	class:Container
+getOpenrecord	.\Container.cpp	/^string Container::getOpenrecord( const string &path, const string &host, pid_t pid){$/;"	f	class:Container
+getPath	.\OpenFile.h	/^        const char *getPath() { return this->path.c_str(); }$/;"	f	class:Plfs_fd
+getPid	.\OpenFile.cpp	/^pid_t Plfs_fd::getPid() {$/;"	f	class:Plfs_fd
+getStati	.\ThreadPool.cpp	/^vector<void*> * ThreadPool::getStati() {$/;"	f	class:ThreadPool
+getTime	.\Util.cpp	/^double Util::getTime( ) {$/;"	f	class:Util
+getWritefile	.\OpenFile.cpp	/^WriteFile *Plfs_fd::getWritefile( ) {$/;"	f	class:Plfs_fd
+get_plfs_conf	.\plfs.cpp	/^get_plfs_conf() {$/;"	f
+getattr	.\Container.cpp	/^int Container::getattr( const string &path, struct stat *stbuf ) {$/;"	f	class:Container
+getmode	.\Container.cpp	/^mode_t Container::getmode( const string &path ) {$/;"	f	class:Container
+getnextent	.\Container.cpp	/^struct dirent *Container::getnextent( DIR *dir, const char *prefix ) {$/;"	f	class:Container
+globalLookup	.\Index.cpp	/^int Index::globalLookup( int *fd, off_t *chunk_off, size_t *chunk_len, $/;"	f	class:Index
+global_from_stream	.\Index.cpp	/^int Index::global_from_stream(void *addr) {$/;"	f	class:Index
+global_index	.\Index.h	/^        map< off_t, ContainerEntry > global_index;$/;"	m	class:Index
+global_summary_dir	.\plfs_private.h	/^    string *global_summary_dir;$/;"	m	struct:__anon10
+global_to_file	.\Index.cpp	/^int Index::global_to_file(int fd){$/;"	f	class:Index
+global_to_stream	.\Index.cpp	/^int Index::global_to_stream(void **buffer,size_t *length) {$/;"	f	class:Index
+handleOverlap	.\Index.cpp	/^int Index::handleOverlap(ContainerEntry &incoming,$/;"	f	class:Index
+has_been_renamed	.\WriteFile.h	/^        bool has_been_renamed; \/\/ use this to guard against a truncate following$/;"	m	class:WriteFile
+hashMethod	.\plfs.cpp	/^hashMethod {$/;"	g	file:
+hashValue	.\Container.cpp	/^size_t Container::hashValue( const char *str ) {$/;"	f	class:Container
+hole	.\plfs.cpp	/^    bool hole;$/;"	m	struct:__anon4	file:
+hostFromChunk	.\Container.cpp	/^string Container::hostFromChunk( string chunkpath, const char *type ) {$/;"	f	class:Container
+hostIndex	.\Index.h	/^        vector< HostEntry > hostIndex;$/;"	m	class:Index
+hostdirFromChunk	.\Container.cpp	/^string Container::hostdirFromChunk( string chunkpath, const char *type ) {$/;"	f	class:Container
+hostdir_index_read	.\Container.cpp	/^vector<IndexFileInfo> Container::hostdir_index_read(const char *path){$/;"	f	class:Container
+hostname	.\Index.h	/^        string hostname;$/;"	m	class:IndexFileInfo
+hostname	.\Util.cpp	/^char *Util::hostname() {$/;"	f	class:Util
+hostname	.\WriteFile.h	/^        string hostname;$/;"	m	class:WriteFile
+id	.\Index.h	/^        pid_t  id;      \/\/ needs to be last so no padding$/;"	m	class:HostEntry
+id	.\Index.h	/^        pid_t  id;$/;"	m	class:IndexFileInfo
+ignoreNoEnt	.\Container.cpp	/^int Container::ignoreNoEnt( int ret ) {$/;"	f	class:Container
+incrementOpens	.\Metadata.h	/^    int incrementOpens( int amount ) {$/;"	f	class:Metadata
+index	.\Container.cpp	/^    Index *index;$/;"	m	struct:__anon1	file:
+index	.\OpenFile.h	/^        Index     *index;$/;"	m	class:Plfs_fd
+index	.\WriteFile.h	/^        Index *index;$/;"	m	class:WriteFile
+index	.\plfs.cpp	/^    Index *index;   \/\/ the index needed to get and stash chunk fds $/;"	m	struct:__anon5	file:
+indexTaskManager	.\Container.cpp	/^int Container::indexTaskManager(deque<IndexerTask> &tasks,Index *index,string path){$/;"	f	class:Container
+index_buffer_mbs	.\WriteFile.h	/^        size_t index_buffer_mbs;$/;"	m	class:WriteFile
+index_mux	.\WriteFile.h	/^        pthread_mutex_t    index_mux;  \/\/ to use the shared index $/;"	m	class:WriteFile
+index_path	.\Index.h	/^        string index_path;$/;"	m	class:Index
+index_stream	.\plfs.h	/^    char *index_stream; \/* Index stream passed in from another proc *\/$/;"	m	struct:__anon7
+indexer_thread	.\Container.cpp	/^indexer_thread( void *va ) {$/;"	f
+init	.\Index.cpp	/^void Index::init( string logical ) {$/;"	f	class:Index
+init	.\LogMessage.cpp	/^int LogMessage::init( ) {$/;"	f	class:LogMessage
+insertGlobal	.\Index.cpp	/^int Index::insertGlobal( ContainerEntry *g_entry ) {$/;"	f	class:Index
+insertGlobalEntry	.\Index.cpp	/^pair<map<off_t,ContainerEntry>::iterator,bool> Index::insertGlobalEntry($/;"	f	class:Index
+insertGlobalEntryHint	.\Index.cpp	/^map<off_t,ContainerEntry>::iterator Index::insertGlobalEntryHint($/;"	f	class:Index
+insert_mount_point	.\plfs.cpp	/^insert_mount_point(PlfsConf *pconf, PlfsMount *pmnt) {$/;"	f
+isBuffering	.\Index.cpp	/^Index::isBuffering() {$/;"	f	class:Index
+isContainer	.\Container.cpp	/^bool Container::isContainer( const string &physical_path, mode_t *mode ) {$/;"	f	class:Container
+isDirectory	.\Util.cpp	/^bool Util::isDirectory( const char *path ) {$/;"	f	class:Util
+isDirectory	.\Util.cpp	/^bool Util::isDirectory( struct stat *buf ) {$/;"	f	class:Util
+isReader	.\plfs.cpp	/^int isReader( int flags ) {$/;"	f
+isSynced	.\Metadata.h	/^    bool isSynced() {$/;"	f	class:Metadata
+isWriter	.\plfs.cpp	/^isWriter( int flags ) {$/;"	f
+is_plfs_file	.\plfs.cpp	/^is_plfs_file( const char *logical, mode_t *mode ) {$/;"	f
+isdir_time	.\Util.h	/^        static double isdir_time;$/;"	m	class:Util
+ispopulated	.\Index.cpp	/^bool Index::ispopulated( ) {$/;"	f	class:Index
+kbytes	.\Util.cpp	/^HASH_MAP<string, off_t>  kbytes;$/;"	v
+lastOffset	.\Index.cpp	/^off_t Index::lastOffset() {$/;"	f	class:Index
+last_offset	.\Index.h	/^        off_t  last_offset;$/;"	m	class:Index
+last_offset	.\Metadata.h	/^        off_t  last_offset;$/;"	m	class:Metadata
+last_offset	.\plfs.h	/^    off_t last_offset;$/;"	m	struct:__anon8
+length	.\Index.h	/^        size_t length;$/;"	m	class:HostEntry
+length	.\plfs.cpp	/^    size_t length;$/;"	m	struct:__anon4	file:
+listToStream	.\Index.cpp	/^void * IndexFileInfo::listToStream(vector<IndexFileInfo> &list,int *bytes)$/;"	f	class:IndexFileInfo
+lock	.\Index.cpp	/^Index::lock( const char *function ) {$/;"	f	class:Index
+log_array	.\LogMessage.cpp	/^string           log_array[LOG_BUFFER_SZ];$/;"	v
+log_array_index	.\LogMessage.cpp	/^long unsigned    log_array_index;   \/\/ ptr to current input point$/;"	v
+log_array_size	.\LogMessage.cpp	/^long unsigned    log_array_size;    \/\/ number of valid entries$/;"	v
+logical_offset	.\Index.h	/^        off_t  logical_offset;$/;"	m	class:HostEntry
+logical_offset	.\plfs.cpp	/^    off_t logical_offset;$/;"	m	struct:__anon4	file:
+logical_path	.\Index.h	/^        string logical_path;$/;"	m	class:Index
+logical_tail	.\Index.cpp	/^off_t HostEntry::logical_tail() const {$/;"	f	class:HostEntry
+makeAccess	.\Container.cpp	/^int Container::makeAccess(const string &path, mode_t mode) {$/;"	f	class:Container
+makeCreator	.\Container.cpp	/^int Container::makeCreator(const string &path) {$/;"	f	class:Container
+makeDropping	.\Container.cpp	/^int Container::makeDropping(const string &path) {$/;"	f	class:Container
+makeDroppingReal	.\Container.cpp	/^int Container::makeDroppingReal(const string &path, mode_t mode) {$/;"	f	class:Container
+makeHostDir	.\Container.cpp	/^int Container::makeHostDir(const string &path,$/;"	f	class:Container
+makeMeta	.\Container.cpp	/^int Container::makeMeta( const string &path, mode_t type, mode_t mode ) {$/;"	f	class:Container
+makeSubdir	.\Container.cpp	/^int Container::makeSubdir( const string &path, mode_t mode ) {$/;"	f	class:Container
+makeTopLevel	.\Container.cpp	/^int Container::makeTopLevel( const string &expanded_path,  $/;"	f	class:Container
+makeUniquePath	.\Container.cpp	/^string Container::makeUniquePath( const string &physical ) {$/;"	f	class:Container
+mapIndex	.\Index.cpp	/^void *Index::mapIndex( string hostindex, int *fd, off_t *length ) {$/;"	f	class:Index
+memcpy_helper	.\Index.cpp	/^char *memcpy_helper(char *dst, void *src, size_t len) {$/;"	f
+memoryFootprintMBs	.\Index.cpp	/^size_t Index::memoryFootprintMBs() {$/;"	f	class:Index
+mergable	.\Index.cpp	/^bool ContainerEntry::mergable( const ContainerEntry &other ) {$/;"	f	class:ContainerEntry
+merge	.\Index.cpp	/^void Index::merge(Index *other) {$/;"	f	class:Index
+mkdir_time	.\Util.h	/^        static double mkdir_time;$/;"	m	class:Util
+mnt_pt	.\plfs_private.h	/^    string mnt_pt;  \/\/ the logical mount point$/;"	m	struct:__anon9
+mnt_pts	.\plfs_private.h	/^    map<string,PlfsMount*> mnt_pts;$/;"	m	struct:__anon10
+mode	.\OpenFile.h	/^        mode_t    mode;$/;"	m	class:Plfs_fd
+mode	.\WriteFile.h	/^        mode_t mode;$/;"	m	class:WriteFile
+mpi	.\plfs.h	/^    int  mpi;           \/* Flag indicating that mpi is being used   *\/$/;"	m	struct:__anon7
+mux	.\Container.cpp	/^    pthread_mutex_t mux;$/;"	m	struct:__anon1	file:
+mux	.\plfs.cpp	/^    pthread_mutex_t mux;    \/\/ to lock the queue$/;"	m	struct:__anon5	file:
+mypid	.\Index.h	/^        pid_t  mypid;$/;"	m	class:Index
+needsSync	.\Metadata.h	/^    bool needsSync() {$/;"	f	class:Metadata
+nextdropping	.\Container.cpp	/^int Container::nextdropping( const string& physical_path, $/;"	f	class:Container
+numWriters	.\WriteFile.cpp	/^size_t WriteFile::numWriters( ) {$/;"	f	class:WriteFile
+num_hostdirs	.\plfs_private.h	/^    size_t num_hostdirs;$/;"	m	struct:__anon10
+openDataFile	.\WriteFile.cpp	/^int WriteFile::openDataFile(string path, string host, pid_t p, mode_t m){$/;"	f	class:WriteFile
+openFile	.\WriteFile.cpp	/^int WriteFile::openFile( string physicalpath, mode_t mode ) {$/;"	f	class:WriteFile
+openFlagsToString	.\Util.cpp	/^string Util::openFlagsToString( int flags ) {$/;"	f	class:Util
+openIndex	.\WriteFile.cpp	/^int WriteFile::openIndex( pid_t pid ) {$/;"	f	class:WriteFile
+openIndexFile	.\WriteFile.cpp	/^int WriteFile::openIndexFile( string path, string host, pid_t p, mode_t m ,string* index_path) {$/;"	f	class:WriteFile
+operator <<	.\Index.cpp	/^ostream& operator <<(ostream &os,const ContainerEntry &entry) {$/;"	f
+operator <<	.\Index.cpp	/^ostream& operator <<(ostream &os,const Index &ndx ) {$/;"	f
+original_chunk	.\Index.h	/^        pid_t original_chunk;	\/\/ we just need to track this so we can $/;"	m	class:ContainerEntry
+overlap	.\Index.cpp	/^bool HostEntry::overlap( const HostEntry &other ) {$/;"	f	class:HostEntry
+parAggregateIndices	.\Container.cpp	/^Index Container::parAggregateIndices(vector<IndexFileInfo>& index_list,$/;"	f	class:Container
+parentStatus	.\Container.h	/^parentStatus {$/;"	g
+parse_conf	.\plfs.cpp	/^parse_conf(FILE *fp, string file) {$/;"	f
+path	.\Container.h	/^    string path;$/;"	m	struct:__anon2
+path	.\Index.h	/^    string path;$/;"	m	struct:__anon3
+path	.\OpenFile.h	/^        string    path;$/;"	m	class:Plfs_fd
+path	.\plfs.cpp	/^    string path;$/;"	m	struct:__anon4	file:
+paths	.\WriteFile.h	/^        map< int, string > paths;      \/\/ need to remember fd paths to restore$/;"	m	class:WriteFile
+perform_read_task	.\plfs.cpp	/^perform_read_task( ReadTask *task, Index *index ) {$/;"	f
+physical_offset	.\Index.h	/^        off_t  physical_offset;  \/\/ I tried so hard to not put this in here$/;"	m	class:HostEntry
+physical_offsets	.\Index.h	/^        map<pid_t,off_t> physical_offsets;$/;"	m	class:Index
+physical_path	.\WriteFile.h	/^        string physical_path;$/;"	m	class:WriteFile
+pid	.\OpenFile.h	/^        pid_t     pid;$/;"	m	class:Plfs_fd
+pinter	.\plfs.h	/^    plfs_interface pinter;$/;"	m	struct:__anon7
+pinter	.\plfs.h	/^    plfs_interface pinter;$/;"	m	struct:__anon8
+plfs_access	.\plfs.cpp	/^plfs_access( const char *logical, int mask ) {$/;"	f
+plfs_buildtime	.\plfs.cpp	/^plfs_buildtime( ) {$/;"	f
+plfs_check_dir	.\plfs.cpp	/^plfs_check_dir(string type, string dir,int previous_ret) {$/;"	f
+plfs_chmod	.\plfs.cpp	/^plfs_chmod( const char *logical, mode_t mode ) {$/;"	f
+plfs_chmod_cleanup	.\plfs.cpp	/^plfs_chmod_cleanup(const char *logical,mode_t mode ) {   $/;"	f
+plfs_chown	.\plfs.cpp	/^plfs_chown( const char *logical, uid_t u, gid_t g ) {$/;"	f
+plfs_chown_cleanup	.\plfs.cpp	/^int plfs_chown_cleanup (const char *logical,uid_t uid,gid_t gid ) {$/;"	f
+plfs_close	.\plfs.cpp	/^plfs_close( Plfs_fd *pfd, pid_t pid, uid_t uid, int open_flags, $/;"	f
+plfs_create	.\plfs.cpp	/^plfs_create( const char *logical, mode_t mode, int flags, pid_t pid ) {$/;"	f
+plfs_debug	.\plfs.cpp	/^plfs_debug( const char *format, ... ) { }$/;"	f
+plfs_debug	.\plfs.cpp	/^plfs_debug( const char *format, ... ) {$/;"	f
+plfs_dump_config	.\plfs.cpp	/^plfs_dump_config(int check_dirs) {$/;"	f
+plfs_dump_index	.\plfs.cpp	/^plfs_dump_index( FILE *fp, const char *logical, int compress ) {$/;"	f
+plfs_dump_index_size	.\plfs.cpp	/^plfs_dump_index_size() {$/;"	f
+plfs_expand_path	.\plfs.cpp	/^int plfs_expand_path(char *logical,char **physical){$/;"	f
+plfs_flatten_index	.\plfs.cpp	/^plfs_flatten_index(Plfs_fd *pfd, const char *logical) {$/;"	f
+plfs_getattr	.\plfs.cpp	/^plfs_getattr(Plfs_fd *of, const char *logical, struct stat *stbuf,int sz_only){$/;"	f
+plfs_getgid	.\plfs.cpp	/^plfs_getgid(){$/;"	f
+plfs_gethostdir_id	.\plfs.cpp	/^size_t plfs_gethostdir_id(char *hostname) {$/;"	f
+plfs_gethostname	.\plfs.cpp	/^char *plfs_gethostname() {$/;"	f
+plfs_getuid	.\plfs.cpp	/^plfs_getuid() {$/;"	f
+plfs_hostdir_rddir	.\plfs.cpp	/^int plfs_hostdir_rddir(void **index_stream,char *targets,int rank,$/;"	f
+plfs_hostdir_zero_rddir	.\plfs.cpp	/^int plfs_hostdir_zero_rddir(void **entries,const char* path,int rank){$/;"	f
+plfs_index_stream	.\plfs.cpp	/^plfs_index_stream(Plfs_fd **pfd, char ** buffer){$/;"	f
+plfs_init	.\plfs.cpp	/^plfs_init(PlfsConf *pconf) { $/;"	f
+plfs_interface	.\plfs.h	/^} plfs_interface;$/;"	t	typeref:enum:__anon6
+plfs_link	.\plfs.cpp	/^plfs_link(const char *logical, const char *to) {$/;"	f
+plfs_merge_indexes	.\plfs.cpp	/^plfs_merge_indexes(Plfs_fd **pfd, char *index_streams, $/;"	f
+plfs_mkdir	.\plfs.cpp	/^plfs_mkdir( const char *logical, mode_t mode ) {$/;"	f
+plfs_mode	.\plfs.cpp	/^plfs_mode(const char *logical, mode_t *mode) {$/;"	f
+plfs_mutex_lock	.\plfs.cpp	/^plfs_mutex_lock(pthread_mutex_t *mux, const char *func){$/;"	f
+plfs_mutex_unlock	.\plfs.cpp	/^plfs_mutex_unlock(pthread_mutex_t *mux, const char *func){$/;"	f
+plfs_open	.\plfs.cpp	/^plfs_open(Plfs_fd **pfd,const char *logical,int flags,pid_t pid,mode_t mode, $/;"	f
+plfs_parindex_read	.\plfs.cpp	/^int plfs_parindex_read(int rank,int ranks_per_comm,void *index_files,$/;"	f
+plfs_parindexread_merge	.\plfs.cpp	/^int plfs_parindexread_merge(const char *path,char *index_streams,$/;"	f
+plfs_query	.\plfs.cpp	/^plfs_query( Plfs_fd *pfd, size_t *writers, size_t *readers ) {$/;"	f
+plfs_read	.\plfs.cpp	/^plfs_read( Plfs_fd *pfd, char *buf, size_t size, off_t offset ) {$/;"	f
+plfs_read_new	.\plfs.cpp	/^plfs_read_new(Plfs_fd *pfd, char *buf, size_t size, off_t offset, Index *index){$/;"	f
+plfs_read_old	.\plfs.cpp	/^plfs_read_old(Plfs_fd *pfd, char *buf, size_t size, off_t offset, Index *index){$/;"	f
+plfs_readdir	.\plfs.cpp	/^plfs_readdir( const char *logical, void *vptr ) {$/;"	f
+plfs_readdir_helper	.\plfs.cpp	/^plfs_readdir_helper( const char *physical, void *vptr ) {$/;"	f
+plfs_readlink	.\plfs.cpp	/^plfs_readlink(const char *logical, char *buf, size_t bufsize) {$/;"	f
+plfs_reference_count	.\plfs.cpp	/^ssize_t plfs_reference_count( Plfs_fd *pfd ) {$/;"	f
+plfs_remove_container	.\plfs.cpp	/^plfs_remove_container(const string &path) {$/;"	f
+plfs_rename	.\plfs.cpp	/^plfs_rename( const char *logical, const char *to ) {$/;"	f
+plfs_rmdir	.\plfs.cpp	/^plfs_rmdir( const char *logical ) {$/;"	f
+plfs_serious_error	.\plfs.cpp	/^plfs_serious_error(const char *msg,pid_t pid ) {$/;"	f
+plfs_setfsgid	.\plfs.cpp	/^plfs_setfsgid(gid_t g){$/;"	f
+plfs_setfsuid	.\plfs.cpp	/^plfs_setfsuid(uid_t u){$/;"	f
+plfs_stat_add	.\plfs.cpp	/^plfs_stat_add(const char *func, double elapsed, int ret) {$/;"	f
+plfs_stats	.\plfs.cpp	/^plfs_stats( void *vptr ) {$/;"	f
+plfs_statvfs	.\plfs.cpp	/^int plfs_statvfs( const char *logical, struct statvfs *stbuf ) {$/;"	f
+plfs_symlink	.\plfs.cpp	/^plfs_symlink(const char *logical, const char *to) {$/;"	f
+plfs_sync	.\plfs.cpp	/^plfs_sync( Plfs_fd *pfd, pid_t pid ) {$/;"	f
+plfs_trunc	.\plfs.cpp	/^plfs_trunc( Plfs_fd *of, const char *logical, off_t offset ) {$/;"	f
+plfs_unlink	.\plfs.cpp	/^plfs_unlink( const char *logical ) {$/;"	f
+plfs_utime	.\plfs.cpp	/^plfs_utime( const char *logical, struct utimbuf *ut ) {$/;"	f
+plfs_version	.\plfs.cpp	/^plfs_version( ) {$/;"	f
+plfs_write	.\plfs.cpp	/^plfs_write(Plfs_fd *pfd, const char *buf, size_t size, off_t offset, pid_t pid){$/;"	f
+plfs_wtime	.\plfs.cpp	/^plfs_wtime() {$/;"	f
+populateIndex	.\Container.cpp	/^int Container::populateIndex(const string &path, Index *index,bool use_global) {$/;"	f	class:Container
+populated	.\Index.h	/^        bool   populated;$/;"	m	class:Index
+readIndex	.\Index.cpp	/^int Index::readIndex( string hostindex ) {$/;"	f	class:Index
+read_helper	.\plfs.cpp	/^read_helper( Index *index, char *buf, size_t size, off_t offset ) {$/;"	f
+reader_thread	.\plfs.cpp	/^reader_thread( void *va ) {$/;"	f
+reference_count	.\Metadata.h	/^        int    reference_count;$/;"	m	class:Metadata
+removeDirectoryTree	.\plfs.cpp	/^removeDirectoryTree( const char *path, bool truncate_only ) {$/;"	f
+removeOpenrecord	.\Container.cpp	/^int Container::removeOpenrecord( const string &path, const string &host, pid_t pid){$/;"	f	class:Container
+removeWriter	.\WriteFile.cpp	/^int WriteFile::removeWriter( pid_t pid ) {$/;"	f	class:WriteFile
+rename_time	.\Util.h	/^        static double rename_time;$/;"	m	class:Util
+requirePlfsPath	.\plfs.cpp	/^requirePlfsPath {$/;"	g	file:
+resetFd	.\Index.h	/^        void resetFd( int fd ) { this->fd = fd; }$/;"	f	class:Index
+restoreFds	.\WriteFile.cpp	/^int WriteFile::restoreFds( ) {$/;"	f	class:WriteFile
+retValue	.\Util.cpp	/^int Util::retValue( int res ) {$/;"	f	class:Util
+retValue	.\plfs.cpp	/^retValue( int res ) {$/;"	f
+rewriteIndex	.\Index.cpp	/^int Index::rewriteIndex( int fd ) {$/;"	f	class:Index
+rmdir_time	.\Util.h	/^        static double rmdir_time;$/;"	m	class:Util
+setChunkFd	.\Index.cpp	/^int Index::setChunkFd( pid_t chunk_id, int fd ) {$/;"	f	class:Index
+setIndex	.\OpenFile.h	/^        void       setIndex( Index *i )          { this->index     = i;  }$/;"	f	class:Plfs_fd
+setPath	.\Index.cpp	/^void Index::setPath( string p ) {$/;"	f	class:Index
+setPath	.\OpenFile.cpp	/^void Plfs_fd::setPath( string p ) {$/;"	f	class:Plfs_fd
+setPath	.\WriteFile.cpp	/^void WriteFile::setPath ( string p ) {$/;"	f	class:WriteFile
+setSynced	.\Metadata.h	/^    void setSynced() {$/;"	f	class:Metadata
+setWritefile	.\OpenFile.h	/^        void       setWritefile( WriteFile *wf ) { this->writefile = wf; }$/;"	f	class:Plfs_fd
+set_default_confs	.\plfs.cpp	/^set_default_confs(PlfsConf *pconf) {$/;"	f
+split	.\Index.cpp	/^ContainerEntry ContainerEntry::split(off_t offset) {$/;"	f	class:ContainerEntry
+splitEntry	.\Index.cpp	/^size_t Index::splitEntry( ContainerEntry *entry, $/;"	f	class:Index
+splittable	.\Index.cpp	/^bool HostEntry::splittable( off_t offset ) const {$/;"	f	class:HostEntry
+startBuffering	.\Index.cpp	/^Index::startBuffering() {$/;"	f	class:Index
+statfs	.\plfs_private.h	/^    string *statfs; \/\/ where to resolve statfs calls$/;"	m	struct:__anon9
+stati	.\ThreadPool.h	/^        vector<void*> stati;$/;"	m	class:ThreadPool
+stopBuffering	.\Index.cpp	/^Index::stopBuffering() {$/;"	f	class:Index
+streamToList	.\Index.cpp	/^vector<IndexFileInfo> IndexFileInfo::streamToList(void * addr){$/;"	f	class:IndexFileInfo
+sync	.\WriteFile.cpp	/^int WriteFile::sync( pid_t pid ) {$/;"	f	class:WriteFile
+synced	.\Metadata.h	/^        bool   synced;$/;"	m	class:Metadata
+tasks	.\Container.cpp	/^    deque<IndexerTask> *tasks;$/;"	m	struct:__anon1	file:
+tasks	.\plfs.cpp	/^    list<ReadTask> *tasks;   \/\/ the queue of tasks$/;"	m	struct:__anon5	file:
+threadError	.\ThreadPool.cpp	/^int ThreadPool::threadError() { $/;"	f	class:ThreadPool
+thread_error	.\ThreadPool.h	/^        int thread_error;$/;"	m	class:ThreadPool
+threadpool_size	.\plfs_private.h	/^    size_t threadpool_size;$/;"	m	struct:__anon10
+timeToString	.\Util.cpp	/^string Util::timeToString( HASH_MAP<string,double>::iterator itr,$/;"	f	class:Util
+time_mux	.\Util.cpp	/^pthread_mutex_t time_mux;$/;"	v
+timestamp	.\Index.h	/^        double timestamp;$/;"	m	class:IndexFileInfo
+timestampFromChunk	.\Container.cpp	/^string Container::timestampFromChunk( string chunkpath, const char *type ) {$/;"	f	class:Container
+toString	.\Util.cpp	/^string Util::toString( ) {$/;"	f	class:Util
+tokenize	.\plfs.cpp	/^vector<string> &tokenize(const string& str,const string& delimiters,$/;"	f
+totalBytes	.\Index.cpp	/^size_t Index::totalBytes() {$/;"	f	class:Index
+total_bytes	.\Index.h	/^        size_t total_bytes;$/;"	m	class:Index
+total_bytes	.\Metadata.h	/^        size_t total_bytes;$/;"	m	class:Metadata
+total_bytes	.\plfs.h	/^    size_t total_bytes;$/;"	m	struct:__anon8
+truncate	.\Index.cpp	/^void Index::truncate( off_t offset ) {$/;"	f	class:Index
+truncate	.\Metadata.h	/^    void truncate( off_t offset ) {$/;"	f	class:Metadata
+truncate	.\WriteFile.cpp	/^int WriteFile::truncate( off_t offset ) {$/;"	f	class:WriteFile
+truncateHostIndex	.\Index.cpp	/^void Index::truncateHostIndex( off_t offset ) {$/;"	f	class:Index
+truncateMeta	.\Container.cpp	/^Container::truncateMeta(const string &path, off_t offset){$/;"	f	class:Container
+unlock	.\Index.cpp	/^Index::unlock( const char *function ) {$/;"	f	class:Index
+utimers	.\Util.cpp	/^HASH_MAP<string, double> utimers;$/;"	v
+valid_meta	.\plfs.h	/^    int valid_meta;$/;"	m	struct:__anon8
+write	.\WriteFile.cpp	/^ssize_t WriteFile::write(const char *buf, size_t size, off_t offset, pid_t pid){$/;"	f	class:WriteFile
+write_count	.\WriteFile.h	/^        int write_count;$/;"	m	class:WriteFile
+writefile	.\OpenFile.h	/^        WriteFile *writefile;$/;"	m	class:Plfs_fd
+writers	.\WriteFile.h	/^    int writers;$/;"	m	struct:OpenFd
+~Index	.\Index.cpp	/^Index::~Index() {$/;"	f	class:Index
+~ThreadPool	.\ThreadPool.cpp	/^ThreadPool::~ThreadPool() {$/;"	f	class:ThreadPool
+~WriteFile	.\WriteFile.cpp	/^WriteFile::~WriteFile() {$/;"	f	class:WriteFile

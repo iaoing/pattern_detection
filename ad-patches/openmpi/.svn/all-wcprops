@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svnroot/plfs/!svn/ver/472/trunk/ad-patches/openmpi
+END
+optimized-panfs-plfs.conf
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/plfs/!svn/ver/407/trunk/ad-patches/openmpi/optimized-panfs-plfs.conf
+END
+README.BEN
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/plfs/!svn/ver/402/trunk/ad-patches/openmpi/README.BEN
+END
+Makefile.ompi-1.4.3
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/plfs/!svn/ver/425/trunk/ad-patches/openmpi/Makefile.ompi-1.4.3
+END
+ompi-1.4.3-plfs-prep.patch
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/plfs/!svn/ver/402/trunk/ad-patches/openmpi/ompi-1.4.3-plfs-prep.patch
+END
+README.BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/plfs/!svn/ver/442/trunk/ad-patches/openmpi/README.BUILD
+END
+optimized-panfs-plfs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/plfs/!svn/ver/407/trunk/ad-patches/openmpi/optimized-panfs-plfs
+END
